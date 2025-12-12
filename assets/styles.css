@@ -2,6 +2,7 @@
 /* 
 lg = large
 md = medium
+sm = small
 */
 :root {
   --primary: #6c63ff;
@@ -11,7 +12,7 @@ md = medium
   --bg-dark: #1f1f1f;
   --spacing-lg: 60px;
   --spacing-md: 20px;
-  --font-title: 50px;
+  --font-title: 60px;
   --blue: #717fe0;
 }
 
@@ -35,7 +36,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: var(--bg-light);  */
+  background-color: var(--bg-light);
   z-index: 1000;
 }
 
@@ -55,11 +56,11 @@ body {
   font-size: 20px;
 }
 
-.hand {
+.header__icon {
   cursor: pointer;
 }
 
-.hand:hover {
+.header__icon:hover {
   color: var(--primary);
 }
 
@@ -97,7 +98,7 @@ body {
 }
 
 .hero__title {
-  font-size: 60px;
+  font-size: var(--font-title);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -281,7 +282,16 @@ body {
 }
 
 /* Responsive */
+@media (min-width: 941px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 940px) {
+  :root {
+    --font-title: 40px;
+  }
   .products {
     padding: var(--spacing-lg) 20px;
   }
@@ -296,6 +306,31 @@ body {
     display: block;
   }
 
+  .nav-mobile {
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--blue);
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-mobile__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .nav-mobile a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .nav-mobile.is-open {
+    max-height: 400px;
+  }
+
   .footer__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -306,7 +341,7 @@ body {
   :root {
     --spacing-lg: 40px;
     --spacing-md: 15px;
-    --font-title: 40px;
+    --font-title: 30px;
   }
 
   .header {
@@ -335,7 +370,7 @@ body {
   .hero__title {
     font-size: 32px;
   }
-  .btn--primary{
+  .btn--primary {
     padding: 12px 24px;
   }
 
@@ -379,7 +414,7 @@ body {
   :root {
     --spacing-lg: 20px;
     --spacing-md: 10px;
-    --font-title: 28px;
+    --font-title: 24px;
   }
 
   .header {
@@ -395,13 +430,16 @@ body {
   }
 
   .header__nav-link {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .header__nav-mobile {
     display: block;
   }
 
+  .nav-mobile a {
+    font-size: 12px;
+  }
   .hero {
     margin-top: 40px;
   }

@@ -11,7 +11,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header fixed">
+    <header class="header header--fixed">
       <div><span class="header__logo">COZA</span> STORE</div>
       <!--Menu dieu huong-->
       <nav class="header__nav">
@@ -24,15 +24,26 @@
       </nav>
 
       <div class="header__icons">
-        <i class="fa-solid fa-magnifying-glass hand"></i>
-        <i class="fa-solid fa-cart-shopping hand"></i>
-        <i class="fa-regular fa-heart hand"></i>
+        <i class="fa-solid fa-magnifying-glass header__icon"></i>
+        <i class="fa-solid fa-cart-shopping header__icon"></i>
+        <i class="fa-regular fa-heart header__icon"></i>
       </div>
 
       <div class="header__nav-mobile">
         <i class="fa-solid fa-list"></i>
       </div>
     </header>
+    <!--MObile menu-->
+    <div class="nav-mobile">
+      <nav class="nav-mobile__menu">
+        <a href="#" class="nav-mobile__link nav-mobile__link--active">Home</a>
+        <a href="./shop.html" class="nav-mobile__link">Shop</a>
+        <a href="#" class="nav-mobile__link">Features</a>
+        <a href="#" class="nav-mobile__link">Blog</a>
+        <a href="#" class="nav-mobile__link">About</a>
+        <a href="#" class="nav-mobile__link">Contact</a>
+      </nav>
+    </div>
 
     <!--hero section-->
     <section class="hero">
@@ -127,7 +138,6 @@
             Add to cart<i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
-
       </div>
     </section>
 
@@ -179,5 +189,7 @@
       <hr class="footer__line" />
       <p class="footer__copyright">Copyright ©2024 All rights reserved.</p>
     </footer>
+
+    <script src="./assets/script.js"></script>
   </body>
 </html>
